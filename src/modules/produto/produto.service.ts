@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { ProdutoDTO } from './produto.dto';
 import { PrismaService } from 'src/database/prisma.service';
+import { ProdutoUpdateDTO } from './produtoUpdate.dto';
 
 @Injectable()
 export class ProdutoService {
@@ -12,6 +13,7 @@ export class ProdutoService {
     });
 
     if (produtoExiste) {
+      console.log(produtoExiste);
       throw new Error('Produto já existe');
     }
 
@@ -51,7 +53,7 @@ export class ProdutoService {
     });
   }
 
-  async update(id: string, data: ProdutoDTO) {
+  async update(id: string, data: ProdutoUpdateDTO) {
     const produtoExiste = await this.prisma.produto.findUnique({
       where: {
         id: id,

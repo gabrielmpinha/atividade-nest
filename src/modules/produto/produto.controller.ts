@@ -4,11 +4,12 @@ import {
   Delete,
   Get,
   Param,
+  Patch,
   Post,
-  Put,
 } from '@nestjs/common';
 import { ProdutoService } from './produto.service';
 import { ProdutoDTO } from './produto.dto';
+import { ProdutoUpdateDTO } from './produtoUpdate.dto';
 
 @Controller('produto')
 export class ProdutoController {
@@ -36,8 +37,8 @@ export class ProdutoController {
     return produto;
   }
 
-  @Put('update/:id') //atualizar
-  async update(@Param() params: any, @Body() data: ProdutoDTO) {
+  @Patch('update/:id') //atualizar
+  async update(@Param() params: any, @Body() data: ProdutoUpdateDTO) {
     return await this.produtoService.update(params.id, data);
   }
 }
