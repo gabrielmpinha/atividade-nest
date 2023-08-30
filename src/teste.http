@@ -1,0 +1,26 @@
+###Pegar todos os Produtos
+get http://localhost:3000/produto/all
+
+###Adicionar um produto
+post http://localhost:3000/produto/create
+Content-Type: application/json
+
+{
+    "nome": "XD",
+    "preco": 215,
+    "img": "img3"
+}
+
+###Pegar um Produto
+get http://localhost:3000/produto/get/3a3a6500-5826-4bea-a445-3ce6b45c2a34
+
+###Atualizar um produto
+put http://localhost:3000/produto/update/3a3a6500-5826-4bea-a445-3ce6b45c2a34
+Content-Type: application/json
+
+{
+    "preco":15.90
+}
+
+###Deletar um produto
+delete http://localhost:3000/produto/delete/abb09af9-e822-4886-8c83-4c2461921a1b
