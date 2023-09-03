@@ -6,16 +6,16 @@ post http://localhost:3000/produto/create
 Content-Type: application/json
 
 {
-    "nome": "da3s",
-    "preco": 2153,
-    "img": "https://img.freepik.com/fotos-gratis/o-gato-vermelho-ou-branco-eu-no-estudio-branco_155003-13189.jpg"
+    "nome": "Halo",
+    "preco": 150,
+    "img": "https://bdjogos.com.br/capas/10529-halo-combat-evolved-anniversary-xbox-360-capa-1.jpg"
 }
 
 ###Pegar um Produto
-get http://localhost:3000/produto/get/3a3a6500-5826-4bea-a445-3ce6b45c2a34
+get http://localhost:3000/produto/get/2efc02a5-de82-45a4-bc32-20d6ad844e59
 
 ###Atualizar um produto
-patch http://localhost:3000/produto/update/b4711003-1cbe-4976-83c5-09d01aa2246d
+patch http://localhost:3000/produto/update/bbe90f82-4a54-4b07-a628-9ba751c3ea29
 Content-Type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-Type: application/json
 }
 
 ###Deletar um produto
-delete http://localhost:3000/produto/delete/3a3a6500-5826-4bea-a445-3ce6b45c2a34
+delete http://localhost:3000/produto/delete/2efc02a5-de82-45a4-bc32-20d6ad844e59
