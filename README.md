@@ -6,4 +6,4 @@
 
 npm run start:dev -> Rodar
 
-npx prisma studio -> Visualziar banco de dados
+npx prisma studio -> Visualizar banco de dados
